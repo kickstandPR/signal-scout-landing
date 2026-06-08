@@ -1,0 +1,280 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Kickstand Signal Scout</title>
+<style>
+  :root{
+    --ink:#0f1115; --ink2:#2b2f38; --muted:#6b7280; --line:#e7e9ee;
+    --bg:#ffffff; --panel:#f6f7f9; --accent:#ff5a3c; --accent2:#1b6ec2;
+    --cyber:#7a4fb5; --robo:#1b7f5c; --martech:#b5562f; --edtech:#2f6fb5;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--ink);
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    line-height:1.55;-webkit-font-smoothing:antialiased}
+  .wrap{max-width:1040px;margin:0 auto;padding:0 22px}
+  a{color:var(--accent2)}
+  .eyebrow{font-size:12px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--accent)}
+  h1{font-size:46px;line-height:1.05;margin:14px 0 10px;letter-spacing:-.02em}
+  h2{font-size:30px;letter-spacing:-.015em;margin:0 0 8px}
+  h3{font-size:18px;margin:0 0 6px}
+  p.lead{font-size:19px;color:var(--ink2);max-width:680px}
+  .muted{color:var(--muted)}
+
+  /* hero */
+  header.hero{background:linear-gradient(180deg,#0f1115 0%,#171b22 100%);color:#fff;padding:64px 0 72px}
+  header.hero .eyebrow{color:#ff856e}
+  header.hero h1{color:#fff}
+  header.hero p.lead{color:#c7ccd6}
+  .pill{display:inline-block;background:#222732;color:#cfd6e2;border:1px solid #2c333f;
+    border-radius:999px;padding:6px 13px;font-size:12.5px;margin:6px 6px 0 0}
+  .cta{display:inline-block;margin-top:26px;background:var(--accent);color:#fff;font-weight:700;
+    padding:13px 22px;border-radius:10px;text-decoration:none;font-size:15px}
+  .cta.secondary{background:transparent;border:1px solid #39414e;color:#e7ebf2;margin-left:10px}
+
+  section{padding:56px 0;border-bottom:1px solid var(--line)}
+  .grid2{display:grid;grid-template-columns:1fr 1fr;gap:22px}
+  .grid4{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+  .grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+  @media(max-width:820px){.grid2,.grid4,.grid3{grid-template-columns:1fr}}
+
+  .card{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:20px}
+  .vcard{border-top:4px solid var(--line)}
+  .tag{font-size:11px;font-weight:700;letter-spacing:.05em;text-transform:uppercase}
+
+  /* stats */
+  .statnum{font-size:46px;font-weight:800;letter-spacing:-.02em;line-height:1}
+  .stat .statnum{background:linear-gradient(90deg,var(--accent),#ff8a5c);-webkit-background-clip:text;background-clip:text;color:transparent}
+  .stat p{margin:8px 0 0;font-size:14px;color:var(--ink2)}
+
+  /* flow diagram */
+  .flow{width:100%;height:auto}
+  .flowcap{font-size:13px;color:var(--muted);text-align:center;margin-top:10px}
+
+  ol.steps{counter-reset:s;list-style:none;padding:0;margin:0}
+  ol.steps li{position:relative;padding:14px 0 14px 50px;border-bottom:1px dashed var(--line)}
+  ol.steps li:before{counter-increment:s;content:counter(s);position:absolute;left:0;top:12px;
+    width:32px;height:32px;border-radius:50%;background:var(--ink);color:#fff;font-weight:700;
+    display:flex;align-items:center;justify-content:center;font-size:14px}
+  footer{padding:40px 0 60px;color:var(--muted);font-size:13px}
+  code{background:#eef0f3;padding:2px 6px;border-radius:5px;font-size:13px}
+  .kbd{font-size:12.5px;color:var(--muted)}
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="wrap">
+    <div class="eyebrow">Kickstand · AI Innovation Challenge</div>
+    <h1>Signal Scout</h1>
+    <p class="lead">An AI agent that watches the market for buying signals, finds the right person to contact, and writes the outreach in each sales lead's own voice — delivered as one short email every weekday morning.</p>
+    <div style="margin-top:18px">
+      <span class="pill">Funding rounds</span>
+      <span class="pill">New product launches</span>
+      <span class="pill">Exec hires</span>
+      <span class="pill">Hiring signals</span>
+      <span class="pill">News &amp; research</span>
+    </div>
+    <div>
+      <a class="cta" href="#how">See how it works ↓</a>
+      <a class="cta secondary" href="#demo">View a sample email</a>
+    </div>
+  </div>
+</header>
+
+<!-- WHY -->
+<section id="why">
+  <div class="wrap">
+    <div class="eyebrow">The opportunity</div>
+    <h2>The first responder wins the deal. We're usually not first.</h2>
+    <p class="lead muted">When a company raises a round, launches a product, or hires a new CMO, that's the moment they need PR — and the window is short. Today nobody at Kickstand is systematically catching those moments across every vertical, every day. Signal Scout does, and hands each sales lead a ready-to-send message before a competitor even notices.</p>
+    <div class="grid3" style="margin-top:30px">
+      <div class="stat card">
+        <div class="statnum">21×</div>
+        <p>more likely to qualify a lead when you respond within 5 minutes vs. 30 minutes.</p>
+      </div>
+      <div class="stat card">
+        <div class="statnum">78%</div>
+        <p>of customers buy from the company that responds <em>first</em> to their need.</p>
+      </div>
+      <div class="stat card">
+        <div class="statnum">47 hrs</div>
+        <p>average B2B response time today — the gap Signal Scout closes to minutes.</p>
+      </div>
+    </div>
+    <p class="kbd" style="margin-top:14px">Source: MIT / Dr. James Oldroyd, Lead Response Management Study (15,000+ leads, with InsideSales.com). Fittingly, Kickstand was founded out of MIT.</p>
+  </div>
+</section>
+
+<!-- HOW / FLOW -->
+<section id="how">
+  <div class="wrap">
+    <div class="eyebrow">How it works</div>
+    <h2>One engine. Six steps. Runs itself Monday–Friday.</h2>
+    <svg class="flow" viewBox="0 0 980 250" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Information flow diagram">
+      <defs>
+        <marker id="arrow" markerWidth="10" markerHeight="10" refX="7" refY="3" orient="auto" markerUnits="strokeWidth">
+          <path d="M0,0 L7,3 L0,6 Z" fill="#9aa2af"/>
+        </marker>
+        <style>
+          .box{fill:#f6f7f9;stroke:#dfe3ea;stroke-width:1.5;rx:12}
+          .t{font:600 13px -apple-system,Segoe UI,Roboto,Arial;fill:#0f1115}
+          .s{font:11px -apple-system,Segoe UI,Roboto,Arial;fill:#6b7280}
+          .ln{stroke:#9aa2af;stroke-width:2;fill:none;marker-end:url(#arrow)}
+          .hdr{font:700 11px -apple-system,Segoe UI,Roboto,Arial;fill:#ff5a3c;letter-spacing:.06em}
+        </style>
+      </defs>
+
+      <!-- Row 1 -->
+      <rect class="box" x="8"   y="30" width="150" height="74" rx="12"/>
+      <text class="hdr" x="20" y="50">1 · COLLECT</text>
+      <text class="t" x="20" y="70">Scan signals</text>
+      <text class="s" x="20" y="88">news · funding · jobs</text>
+
+      <rect class="box" x="200" y="30" width="150" height="74" rx="12"/>
+      <text class="hdr" x="212" y="50">2 · SCORE</text>
+      <text class="t" x="212" y="70">Rank vs. ICP</text>
+      <text class="s" x="212" y="88">0–100 fit, keep best</text>
+
+      <rect class="box" x="392" y="30" width="150" height="74" rx="12"/>
+      <text class="hdr" x="404" y="50">3 · ENRICH</text>
+      <text class="t" x="404" y="70">Best contact</text>
+      <text class="s" x="404" y="88">HubSpot → Apollo</text>
+
+      <rect class="box" x="584" y="30" width="150" height="74" rx="12"/>
+      <text class="hdr" x="596" y="50">4 · DRAFT</text>
+      <text class="t" x="596" y="70">In lead's voice</text>
+      <text class="s" x="596" y="88">Claude + voice profile</text>
+
+      <rect class="box" x="776" y="30" width="172" height="74" rx="12"/>
+      <text class="hdr" x="788" y="50">5 · SEND</text>
+      <text class="t" x="788" y="70">Daily email</text>
+      <text class="s" x="788" y="88">one per vertical, 7:30am</text>
+
+      <!-- connectors row1 -->
+      <path class="ln" d="M158,67 L198,67"/>
+      <path class="ln" d="M350,67 L390,67"/>
+      <path class="ln" d="M542,67 L582,67"/>
+      <path class="ln" d="M734,67 L774,67"/>
+
+      <!-- down to step 6 -->
+      <path class="ln" d="M862,104 L862,150"/>
+      <rect class="box" x="584" y="150" width="364" height="74" rx="12" style="fill:#fff7f4;stroke:#f3cabc"/>
+      <text class="hdr" x="600" y="172" style="fill:#ff5a3c">6 · ACT &amp; LOG</text>
+      <text class="t" x="600" y="192">Lead clicks “Send &amp; log” → outreach happens</text>
+      <text class="s" x="600" y="210">action auto-logged in HubSpot (creates contact if new)</text>
+
+      <!-- schedule label -->
+      <rect class="box" x="8" y="150" width="364" height="74" rx="12" style="fill:#0f1115;stroke:#0f1115"/>
+      <text x="24" y="180" style="font:700 13px -apple-system,Segoe UI;fill:#fff">⟳ GitHub Actions</text>
+      <text x="24" y="200" style="font:11px -apple-system,Segoe UI;fill:#9aa2af">free scheduler · runs Mon–Fri · no server to babysit</text>
+      <path class="ln" d="M372,187 L582,187"/>
+    </svg>
+    <p class="flowcap">Every external service is optional and activates only when its key is added — so it ships free for the pitch and turns on paid pieces after budget approval.</p>
+  </div>
+</section>
+
+<!-- VERTICALS -->
+<section id="verticals">
+  <div class="wrap">
+    <div class="eyebrow">Four instances, one codebase</div>
+    <h2>A tuned scout for each Kickstand vertical</h2>
+    <p class="lead muted">Each vertical is a block of plain-text config plus a voice profile — not a separate tool. The drafts sound like the actual lead, down to their quirks.</p>
+    <div class="grid4" style="margin-top:26px">
+      <div class="card vcard" style="border-top-color:var(--cyber)">
+        <div class="tag" style="color:var(--cyber)">Cybersecurity</div>
+        <h3>Sarah</h3>
+        <p class="muted" style="font-size:13.5px">Q-Day / post-quantum POV. No em-dashes. Signs "Kindly,".</p>
+      </div>
+      <div class="card vcard" style="border-top-color:var(--robo)">
+        <div class="tag" style="color:var(--robo)">Robotics &amp; Mobility</div>
+        <h3>Rebecca</h3>
+        <p class="muted" style="font-size:13.5px">Ex-journalist voice. EV/robotics as national-security story.</p>
+      </div>
+      <div class="card vcard" style="border-top-color:var(--martech)">
+        <div class="tag" style="color:var(--martech)">MarTech &amp; SalesTech</div>
+        <h3>Lindsay</h3>
+        <p class="muted" style="font-size:13.5px">Dry, POV-first. AI-search angle. Em-dashes welcome.</p>
+      </div>
+      <div class="card vcard" style="border-top-color:var(--edtech)">
+        <div class="tag" style="color:var(--edtech)">EdTech &amp; Workplace</div>
+        <h3>Kara</h3>
+        <p class="muted" style="font-size:13.5px">Warm, "Hey there." Frames reporter time as the scarce resource.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- DEMO -->
+<section id="demo">
+  <div class="wrap">
+    <div class="eyebrow">What lands in the inbox</div>
+    <h2>One signal, fully worked up</h2>
+    <div class="grid2" style="margin-top:24px;align-items:start">
+      <div class="card" style="padding:0;overflow:hidden">
+        <div style="background:#111;color:#fff;padding:14px 18px">
+          <div style="font-weight:800">Kickstand Signal Scout</div>
+          <div style="color:#9fb4c9;font-size:12px">Cybersecurity · for Sarah · weekday 7:30am</div>
+        </div>
+        <div style="padding:18px">
+          <span style="background:#1b7f5c;color:#fff;font-size:11px;font-weight:700;padding:3px 9px;border-radius:20px">Funding</span>
+          <span style="float:right;font-size:12px;color:#999">fit 63/100</span>
+          <div style="font-size:16px;font-weight:700;margin:10px 0 2px">Aurora Defense Labs</div>
+          <div style="font-size:13.5px;color:#1b6ec2">Aurora Defense Labs raises $22M Series A to harden post-quantum encryption for banks</div>
+          <div style="font-size:11.5px;color:#999;margin-top:3px">TechCrunch · view signal</div>
+          <div style="margin-top:12px;padding:10px 12px;background:#f7f8fa;border-radius:8px">
+            <div style="font-size:11px;color:#666;text-transform:uppercase">Best point of contact</div>
+            <div style="font-size:13.5px;font-weight:600">Jordan Avery, VP of Marketing</div>
+            <div style="font-size:12.5px"><a href="#">LinkedIn</a> · jordan.avery@example.com</div>
+          </div>
+          <div style="margin-top:10px;padding:10px 12px;background:#fffdf5;border:1px solid #f0e6c8;border-radius:8px">
+            <div style="font-size:11px;color:#8a7400;text-transform:uppercase">Suggested message · in Sarah's voice</div>
+            <div style="font-size:13px;color:#222;margin-top:5px">Hi Jordan, saw the news about your Series A, congrats. Quick thought, cyber stories like this get a short window of reporter attention, and most teams aren't set up to capitalize on it. We run rapid-response PR for security companies and could help you turn this into earned coverage while it's timely. Worth 15 minutes? Kindly, Sarah</div>
+          </div>
+          <div style="margin-top:12px"><span style="background:#111;color:#fff;font-size:12.5px;font-weight:600;padding:8px 16px;border-radius:8px">Send &amp; log to HubSpot →</span></div>
+        </div>
+      </div>
+      <div>
+        <h3>Every card carries what the lead needs to act in 30 seconds</h3>
+        <ol class="steps">
+          <li><b>The signal</b>, with a link to the source.</li>
+          <li><b>The company</b> and why it scored as a fit.</li>
+          <li><b>The best contact</b> — name, title, LinkedIn, and email.</li>
+          <li><b>A message in the lead's exact voice</b>, referencing the real signal and nothing invented.</li>
+          <li><b>One button</b> that sends and logs the touch to HubSpot.</li>
+        </ol>
+        <p class="muted" style="font-size:13.5px">Messages are always <b>suggested</b>, never auto-sent — a human stays in the loop.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- BUILD / COST -->
+<section id="cost">
+  <div class="wrap">
+    <div class="eyebrow">Built to ship</div>
+    <h2>Editable by the team. Cheap to run.</h2>
+    <div class="grid2" style="margin-top:24px">
+      <div class="card">
+        <h3>Lives in GitHub, not in one person's account</h3>
+        <p class="muted" style="font-size:14px">Anyone at Kickstand can open <code>config/verticals.yaml</code> and <code>config/voice_profiles.yaml</code> to change recipients, keywords, or a lead's tone — no coding. GitHub Actions runs it on schedule for free.</p>
+      </div>
+      <div class="card">
+        <h3>Under budget by design</h3>
+        <p class="muted" style="font-size:14px"><b>$0</b> to demo for the submission. <b>~$55–105/mo</b> for the recommended live version (AI drafts + existing Apollo). <b>≤$195/mo</b> even with premium funding + jobs feeds — comfortably inside the $200 ceiling and the $10K implementation budget.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <b style="color:var(--ink)">Kickstand Signal Scout</b> — prototype for the AI Innovation Challenge.<br>
+    Stats: MIT Lead Response Management Study (Oldroyd / InsideSales.com). Sample data shown is illustrative.
+  </div>
+</footer>
+
+</body>
+</html>
